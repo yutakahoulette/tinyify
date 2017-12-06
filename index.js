@@ -1,7 +1,7 @@
 var packFlat = require('browser-pack-flat/plugin')
 var collapser = require('bundle-collapser/plugin')
 var packFlatStream = require('browser-pack-flat')
-var commonShake = require('common-shakeify')
+// var commonShake = require('common-shakeify')
 var unassertify = require('unassertify')
 var uglify = require('minify-stream')
 var envify = require('envify/custom')
@@ -62,7 +62,7 @@ module.exports = function (b, opts) {
   }
 
   // Remove unused exports from modules.
-  b.plugin(commonShake)
+  // b.plugin(commonShake)
 
   // Minify the final output.
   var uglifyOpts = makeUglifyOptions(b._options.debug)
